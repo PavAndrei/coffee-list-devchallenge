@@ -1,0 +1,33 @@
+.filtersList {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.filtersBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1rem;
+
+  border: 1px solid transparent;
+  border-radius: 12px;
+
+  color: var(--text-primary);
+  background-color: transparent;
+  font-weight: 700;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.filtersBtn:hover {
+  transform: scale(1.1);
+}
+
+.filtersBtnSelected {
+  background-color: var(--background-secondary);
+}
+
+.filtersBtn:active {
+  background-color: var();
+}

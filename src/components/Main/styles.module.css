@@ -1,0 +1,13 @@
+.mainInner {
+  background-color: var(--background-primary);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+
+  padding-bottom: 3.2rem;
+}

@@ -1,0 +1,17 @@
+import { FC, ReactNode } from "react";
+import styles from "./styles.module.css";
+import { Container } from "../Container/Container";
+
+interface MainProps {
+  children: ReactNode;
+}
+
+export const Main: FC<MainProps> = ({ children }) => {
+  return (
+    <main className={styles.main}>
+      <Container>
+        <div className={styles.mainInner}>{children}</div>
+      </Container>
+    </main>
+  );
+};

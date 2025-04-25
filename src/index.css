@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  --background: #1b1d1f;
+  --background-primary: #2c2d2e;
+  --background-secondary: #6f757c;
+  --background-tag-popular: #f6c768;
+  --background-price: #bee3cc;
+
+  --text-primary: #fef7ee;
+  --text-secondary: #6f757c;
+  --text-price: #111315;
+  --text-sold-out: #ed735d;
+
+  --star-color: #f6c768;
+
+  background-image: url(./assets/images/backgrounds/bg-cafe-lg.jpg);
+  background-size: 100% 30vh;
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+  background-color: var(--background);
+
+  font-size: var(--font-regular);
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+}
+
+button,
+img {
+  display: block;
+}
+
+button {
+  font-family: "Sora", sans-serif;
+  cursor: pointer;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+  list-style-type: none;
+}
