@@ -7,6 +7,7 @@ export type DataContextValues = {
   changeFilters: (newFilter: string) => void;
   isLoading: boolean;
   error: Error | null;
+  filters: string;
 };
 
 const DataContext = createContext<DataContextValues | undefined>(undefined);
@@ -22,7 +23,7 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     if (filters === "all") {
       setMenu(data);
-    } else if (filters === "availiable") {
+    } else if (filters === "available") {
       setMenu(data?.filter((coffee) => coffee.available));
     }
   }, [filters, data]);
@@ -32,7 +33,9 @@ export const DataProvider = ({ children }: { children: React.ReactNode }) => {
   };
 
   return (
-    <DataContext.Provider value={{ menu, isLoading, error, changeFilters }}>
+    <DataContext.Provider
+      value={{ menu, filters, isLoading, error, changeFilters }}
+    >
       {children}
     </DataContext.Provider>
   );

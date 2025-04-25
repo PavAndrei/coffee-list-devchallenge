@@ -1,7 +1,14 @@
+.listWrapper {
+  max-width: calc(260px * 3 + 3rem);
+  width: 100%;
+}
+
 .list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, 260px);
   gap: 1.5rem;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .warning,
@@ -18,4 +25,18 @@
 
 .error {
   color: var(--danger);
+}
+
+@media (max-width: 900px) {
+  .listWrapper {
+    max-width: calc(260px * 2 + 3rem);
+  }
+}
+
+@media (max-width: 570px) {
+  .list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }

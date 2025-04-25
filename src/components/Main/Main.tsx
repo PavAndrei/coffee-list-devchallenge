@@ -1,6 +1,8 @@
 import { FC, ReactNode } from "react";
-import styles from "./styles.module.css";
+
 import { Container } from "../Container/Container";
+
+import styles from "./styles.module.css";
 
 interface MainProps {
   children: ReactNode;

@@ -1,9 +1,11 @@
 import { FC } from "react";
-import styles from "./styles.module.css";
+
 import { useDataContext } from "../../context/DataContext";
 
+import styles from "./styles.module.css";
+
 export const Filters: FC = () => {
-  const { changeFilters } = useDataContext();
+  const { changeFilters, filters } = useDataContext();
 
   return (
     <ul className={styles.filtersList}>
@@ -11,16 +13,22 @@ export const Filters: FC = () => {
         <button
           onClick={() => changeFilters("all")}
           aria-label="select all products"
-          className={styles.filtersBtn}
+          className={
+            filters === "all" ? styles.filtersBtnSelected : styles.filtersBtn
+          }
         >
           All Products
         </button>
       </li>
       <li className={styles.filtersItem}>
         <button
-          onClick={() => changeFilters("availiable")}
+          onClick={() => changeFilters("available")}
           aria-label="select available products"
-          className={styles.filtersBtn}
+          className={
+            filters === "available"
+              ? styles.filtersBtnSelected
+              : styles.filtersBtn
+          }
         >
           Available Now
         </button>

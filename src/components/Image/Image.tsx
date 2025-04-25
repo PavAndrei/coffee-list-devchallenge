@@ -1,5 +1,7 @@
 import { FC } from "react";
+
 import { IImage } from "../../models/IImage";
+
 import styles from "./styles.module.css";
 
 export const Image: FC<IImage> = ({ src, alt, isPopular }) => {

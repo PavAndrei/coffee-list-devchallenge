@@ -2,9 +2,9 @@ import { FC } from "react";
 import { ICoffee } from "../../models/ICoffee";
 
 import { Image } from "./../Image/Image";
+import { Star } from "../../icons/Star";
 
 import styles from "./styles.module.css";
-import { Star } from "../../icons/Star";
 
 export const CoffeeItem: FC<ICoffee> = (coffee) => {
   return (

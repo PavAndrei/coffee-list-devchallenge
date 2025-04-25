@@ -1,7 +1,10 @@
 import { FC } from "react";
-import styles from "./styles.module.css";
-import { CoffeeItem } from "../CoffeeItem/CoffeeItem";
+
 import { useDataContext } from "../../context/DataContext";
+
+import { CoffeeItem } from "../CoffeeItem/CoffeeItem";
+
+import styles from "./styles.module.css";
 
 export const CoffeeList: FC = () => {
   const { menu, isLoading, error } = useDataContext();

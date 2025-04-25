@@ -1,6 +1,8 @@
 import { FC } from "react";
-import styles from "./styles.module.css";
+
 import { Container } from "../Container/Container";
+
+import styles from "./styles.module.css";
 
 export const Header: FC = () => {
   return (
@@ -13,6 +15,7 @@ export const Header: FC = () => {
             from different roast types and origins, expertly roasted in small
             batches and shipped fresh weekly.
           </p>
+          <span className={styles.decor}></span>
         </div>
       </Container>
     </header>
