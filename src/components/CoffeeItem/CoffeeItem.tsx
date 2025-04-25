@@ -23,7 +23,9 @@ export const CoffeeItem: FC<ICoffee> = (coffee) => {
           <span className={styles.votes}>
             {coffee.votes > 0 ? `(${coffee.votes} votes)` : "No ratings"}
           </span>
-          <span className={styles.soldout}>Sold out</span>
+          {!coffee.available && (
+            <span className={styles.soldout}>Sold out</span>
+          )}
         </div>
       </div>
     </li>

@@ -14,13 +14,13 @@ body {
   --background: #1b1d1f;
   --background-primary: #2c2d2e;
   --background-secondary: #6f757c;
-  --background-tag-popular: #f6c768;
+  --warning: #f6c768;
   --background-price: #bee3cc;
 
   --text-primary: #fef7ee;
   --text-secondary: #6f757c;
   --text-price: #111315;
-  --text-sold-out: #ed735d;
+  --danger: #ed735d;
 
   --star-color: #f6c768;
 

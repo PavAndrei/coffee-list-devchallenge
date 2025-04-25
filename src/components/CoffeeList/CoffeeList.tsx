@@ -1,16 +1,14 @@
 import { FC } from "react";
 import styles from "./styles.module.css";
-import { ICoffee } from "../../models/ICoffee";
 import { CoffeeItem } from "../CoffeeItem/CoffeeItem";
+import { useDataContext } from "../../context/DataContext";
 
-interface CoffeeListProps {
-  menu: ICoffee[];
-}
+export const CoffeeList: FC = () => {
+  const { menu, isLoading, error } = useDataContext();
 
-export const CoffeeList: FC<CoffeeListProps> = ({ menu }) => {
-  return (
+  const data = (
     <ul className={styles.list}>
-      {menu.map((coffee) => {
+      {menu?.map((coffee) => {
         return (
           <CoffeeItem
             key={coffee.name}
@@ -25,5 +23,21 @@ export const CoffeeList: FC<CoffeeListProps> = ({ menu }) => {
         );
       })}
     </ul>
+  );
+
+  const loading = (
+    <span className={styles.warning}>
+      Loading... Please wait a bit or reload the page.
+    </span>
+  );
+
+  const errorMessage = (
+    <span className={styles.error}>Something went wrong...</span>
+  );
+
+  return (
+    <div className={styles.listWrapper}>
+      {menu && data} {isLoading && loading} {error && errorMessage}
+    </div>
   );
 };

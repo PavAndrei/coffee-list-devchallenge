@@ -58,5 +58,5 @@
 .soldout {
   margin-left: auto;
   margin-right: 0;
-  color: var(--text-sold-out);
+  color: var(--danger);
 }

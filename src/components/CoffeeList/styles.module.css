@@ -3,3 +3,19 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
+
+.warning,
+.error {
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 auto;
+}
+
+.warning {
+  color: var(--warning);
+}
+
+.error {
+  color: var(--danger);
+}
