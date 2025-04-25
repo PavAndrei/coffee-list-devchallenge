@@ -49,6 +49,13 @@
   .header {
     padding-top: 15vh;
   }
+
+  .decor {
+    top: 0%;
+    right: 0%;
+    width: 60%;
+    height: 60%;
+  }
 }
 
 @media (max-width: 768px) {
