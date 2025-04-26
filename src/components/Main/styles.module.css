@@ -1,3 +1,7 @@
+.main {
+  height: 100%;
+}
+
 .mainInner {
   background-color: var(--background-primary);
 

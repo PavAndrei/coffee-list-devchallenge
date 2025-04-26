@@ -7,8 +7,13 @@
 }
 
 html {
-  background-color: #1113;
+  background-color: #111315;
   font-size: 62.5%;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
 }
 
 body {
@@ -30,6 +35,7 @@ body {
   background-repeat: no-repeat;
   background-position: 0% 0%;
   background-color: var(--background);
+  height: 100%;
 
   font-size: var(--font-regular);
   font-family: "Sora", sans-serif;
